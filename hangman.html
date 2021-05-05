@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onkeypress="check(event)">
+    <button>Start</button>
+    <div id="chances"></div>
+
+    <script>
+        let words = [
+            {
+                right: 'jimmycarter',
+                hint: 'Famous Person'
+            },
+            {
+                right: 'ladybug',
+                hint: 'Animal'
+            },
+            {
+                right: 'apple',
+                hint: 'company'
+            },
+            {
+                right: 'trendsetters',
+                hint: 'One-Vowel Words'
+            },
+            {
+                right : 'listening',
+                hint : 'A verb'
+            },
+            {
+                right : 'football',
+                hint : 'A Sport'
+            }
+        ]
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let chances = document.querySelector('#chances')
+        let count = 10;
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', start);
+
+        function start() {
+            total = 0;
+            num = getRndInteger(0, 5);
+            btn.style.display = 'none'
+            chances.textContent = 'Chances Reamining - ' + count
+            let p = document.createElement('p');
+            p.textContent = words[num].hint;
+            document.body.appendChild(p);
+            let div = document.createElement('div');
+            for (let i = 0; i < words[num].right.length; ++i) {
+                input = document.createElement('input');
+                input.size = '1'
+                div.appendChild(input)
+            }
+            document.body.appendChild(div)
+        }
+
+        function check(event) {
+            let x = event.keyCode;
+            let status = 0;
+            c = document.querySelectorAll('input')
+            for (let i = 0; i < words[num].right.length; ++i) {
+                if (x == words[num].right.charCodeAt(i)) {
+                    c[i].value = String.fromCharCode(x);
+                    status = 1;
+                    total++;
+                }
+
+            }
+            if(status == 0){
+                    --count;
+                    chances.textContent = 'Chances Reamining - ' + count
+                    if(count == 0){
+                        alert('Game Over')
+                        restart()
+                    }
+                }
+                if(total == words[num].right.length) {
+                    alert('You won')
+                    restart()
+                }
+        }
+
+        function restart(){
+            document.body.innerHTML = '';
+            let btn = document.createElement('button')
+            btn.innerHTML = 'Play Again';
+            btn.addEventListener('click', start)
+            document.body.appendChild(btn)
+        }
+    </script>
+</body>
+
+</html>

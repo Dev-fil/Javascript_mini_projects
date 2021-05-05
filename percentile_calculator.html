@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gamecss/p.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+          background-color:#ECF0F1;
+        }
+        </style>
+</head>
+<body>
+     
+    <div id="header">
+        <span>PERCENTILE</span>     <span>CALCULATOR</span>
+         </div><br>
+         <div id="div1">
+         <div class="l1">
+         <svg class="bi bi-clipboard-data" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" clip-rule="evenodd"/>
+            <path d="M4 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm6-4a1 1 0 112 0v5a1 1 0 11-2 0V7zM7 9a1 1 0 012 0v3a1 1 0 11-2 0V9z"/>
+          </svg>&nbsp;
+          <button type="button" class="btn btn-secondary btn-lg" onclick="tip()">Tip Calculator</button>
+          &nbsp;
+         
+         <div class="l1">
+            <svg class="bi bi-clipboard-data" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" clip-rule="evenodd"/>
+               <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" clip-rule="evenodd"/>
+               <path d="M4 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm6-4a1 1 0 112 0v5a1 1 0 11-2 0V7zM7 9a1 1 0 012 0v3a1 1 0 11-2 0V9z"/>
+             </svg>&nbsp;
+             <button type="button" class="btn btn-secondary btn-lg">Percent Margin</button>
+            </div><br>
+         </div><br>&nbsp;
+
+            <div class="l1">
+                <svg class="bi bi-clipboard-data" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" clip-rule="evenodd"/>
+                   <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" clip-rule="evenodd"/>
+                   <path d="M4 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm6-4a1 1 0 112 0v5a1 1 0 11-2 0V7zM7 9a1 1 0 012 0v3a1 1 0 11-2 0V9z"/>
+                 </svg>&nbsp;
+                 <button type="button" class="btn btn-secondary btn-lg" onclick="increase()">Percent Increase</button>
+                </div><br>&nbsp;
+                <div class="l1">
+                    <svg class="bi bi-clipboard-data" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                       <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" clip-rule="evenodd"/>
+                       <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" clip-rule="evenodd"/>
+                       <path d="M4 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm6-4a1 1 0 112 0v5a1 1 0 11-2 0V7zM7 9a1 1 0 012 0v3a1 1 0 11-2 0V9z"/>
+                     </svg>&nbsp;
+                     <button type="button" class="btn btn-secondary btn-lg" onclick="Discount()">Percent Discount</button>
+                    </div><br>&nbsp;
+                    <div class="l1">
+                        <svg class="bi bi-clipboard-data" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" clip-rule="evenodd"/>
+                           <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" clip-rule="evenodd"/>
+                           <path d="M4 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm6-4a1 1 0 112 0v5a1 1 0 11-2 0V7zM7 9a1 1 0 012 0v3a1 1 0 11-2 0V9z"/>
+                         </svg>&nbsp;
+                         <button type="button" class="btn btn-secondary btn-lg" onclick="pc()">Percent Calculator</button>
+                        </div><br>&nbsp;
+                        <div class="l1">
+                            <svg class="bi bi-clipboard-data" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                               <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" clip-rule="evenodd"/>
+                               <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" clip-rule="evenodd"/>
+                               <path d="M4 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm6-4a1 1 0 112 0v5a1 1 0 11-2 0V7zM7 9a1 1 0 012 0v3a1 1 0 11-2 0V9z"/>
+                             </svg>&nbsp;
+                             <button type="button" class="btn btn-secondary btn-lg" onclick="change()">Percentage Change</button>
+                            </div><br>&nbsp;&nbsp;
+
+<button onclick="refreshPage()"><svg class="bi bi-arrow-repeat" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M2.854 7.146a.5.5 0 00-.708 0l-2 2a.5.5 0 10.708.708L2.5 8.207l1.646 1.647a.5.5 0 00.708-.708l-2-2zm13-1a.5.5 0 00-.708 0L13.5 7.793l-1.646-1.647a.5.5 0 00-.708.708l2 2a.5.5 0 00.708 0l2-2a.5.5 0 000-.708z" clip-rule="evenodd"/>
+    <path fill-rule="evenodd" d="M8 3a4.995 4.995 0 00-4.192 2.273.5.5 0 01-.837-.546A6 6 0 0114 8a.5.5 0 01-1.001 0 5 5 0 00-5-5zM2.5 7.5A.5.5 0 013 8a5 5 0 009.192 2.727.5.5 0 11.837.546A6 6 0 012 8a.5.5 0 01.501-.5z" clip-rule="evenodd"/>
+  </svg></button>
+
+
+
+                        </div><br>&nbsp;
+                            <div class="l2">
+                                <svg class="bi bi-clipboard-data" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                   <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" clip-rule="evenodd"/>
+                                   <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" clip-rule="evenodd"/>
+                                   <path d="M4 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm6-4a1 1 0 112 0v5a1 1 0 11-2 0V7zM7 9a1 1 0 012 0v3a1 1 0 11-2 0V9z"/>
+                                 </svg>&nbsp;
+                                 <button type="button" class="btn btn-secondary btn-lg" onclick="per()">Percentage(what % of)</button>&nbsp;&nbsp;
+                                 <p style="font-size: xx-large; font-style: italic;color:crimson;font-weight: 900;">  &nbsp; EVERYTIME TO PERFORM NEW CALCULATION,PRESS REFRESH BUTTON</p>
+                                </div><br>
+
+
+
+</body>
+<script>
+   function refreshPage(){
+		if(confirm("Are you sure, want to refresh?")){
+			location.reload();
+		}				
+	}
+    function tip(){
+        // document.body.removeChild(document.getElementById('heading1'))
+     
+            let ques = document.createElement('p')
+            ques.innerHTML = "Total Amount"
+            ques.style.fontSize="25px"
+            
+            document.body.appendChild(ques)
+            let div1 = document.createElement("div")
+            div1.id = 'div1'
+            let userinput1 = document.createElement('input')
+            userinput1.type = "number"
+            userinput1.id = "inp1"
+            userinput1.style.backgroundColor="#ECF0F1"
+            userinput1.style.borderColor="black"
+            document.body.appendChild(div1.appendChild(userinput1))
+
+            let ques1 = document.createElement('p')
+            ques1.innerHTML = "No. of People"
+            ques1.style.fontSize="25px"
+            
+            document.body.appendChild(ques1)
+            let div2 = document.createElement("div")
+            div2.id = 'div2'
+            let userinput2 = document.createElement('input')
+            userinput2.type = "number"
+            userinput2.id = "inp2"
+            userinput2.style.backgroundColor="#ECF0F1"
+            userinput2.style.borderColor="black"
+            document.body.appendChild(div2.appendChild(userinput2))
+
+            let ques2 = document.createElement('p')
+            ques2.innerHTML = "Tip Percentage"
+            ques2.style.fontSize="25px"
+            
+            document.body.appendChild(ques2)
+            let div3 = document.createElement("div")
+            div3.id = 'div3'
+            let userinput3 = document.createElement('input')
+            userinput3.type = "number"
+            userinput3.id = "inp3"
+            userinput3.style.backgroundColor="#ECF0F1"
+            userinput3.style.borderColor="black"
+            document.body.appendChild(div3.appendChild(userinput3))
+
+            let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+
+            let div6 = document.createElement("div")
+            div6.id = 'div6'
+            let sub = document.createElement('button')
+            sub.id = "sub"
+            sub.innerHTML = "CALCULATE"
+            sub.style.borderColor="black"
+            sub.style.fontStyle="italic"
+            sub.style.boxSizing="25%"
+ 
+
+            
+            document.body.appendChild(div6.appendChild(sub))     
+            sub.addEventListener("click",checkResult)
+    }
+    function checkResult(){
+        var amount=document.getElementById("inp1").value
+        var people=document.getElementById("inp2").value
+        var Percentage=document.getElementById("inp3").value
+        
+        var tip_amount=(Percentage/amount)*100;
+        var total_pay=parseInt(tip_amount)+parseInt(amount);
+        var per_person=total_pay/people;
+
+
+
+        let para = document.createElement('p')
+        para.innerHTML = "Tip Amount:"+tip_amount;
+            para.style.fontSize="20px"
+            para.style.fontWeight="1200"
+            para.style.fontStyle="italic"
+            para.style.color="red"
+            document.body.appendChild(para)
+    
+
+    let para1 = document.createElement('p')
+        para1.innerHTML = "Total To Pay:"+total_pay;
+            para1.style.fontSize="20px"
+            para1.style.fontWeight="1200"
+            para1.style.fontStyle="italic"
+            para1.style.color="red"
+            document.body.appendChild(para1)
+    
+
+    let para2 = document.createElement('p')
+        para2.innerHTML = "Tip Percentage:"+per_person;
+            para2.style.fontSize="20px"
+            para2.style.fontWeight="1200"
+            para2.style.fontStyle="italic"
+            para2.style.color="red"
+            document.body.appendChild(para2)
+    }
+    function increase(){
+        let ques = document.createElement('p')
+            ques.innerHTML = " Amount"
+            ques.style.fontSize="25px"
+            
+            document.body.appendChild(ques)
+            let div1 = document.createElement("div")
+            div1.id = 'div1'
+            let userinput1 = document.createElement('input')
+            userinput1.type = "number"
+            userinput1.id = "inp1"
+            userinput1.style.backgroundColor="#ECF0F1"
+            userinput1.style.borderColor="black"
+            document.body.appendChild(div1.appendChild(userinput1))
+
+            let ques1 = document.createElement('p')
+            ques1.innerHTML = "Increase By"
+            ques1.style.fontSize="25px"
+            
+            document.body.appendChild(ques1)
+            let div2 = document.createElement("div")
+            div2.id = 'div2'
+            let userinput2 = document.createElement('input')
+            userinput2.type = "number"
+            userinput2.id = "inp2"
+            userinput2.style.backgroundColor="#ECF0F1"
+            userinput2.style.borderColor="black"
+            document.body.appendChild(div2.appendChild(userinput2))
+
+
+            
+            let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+
+            // let div6 = document.createElement("div")
+            // div6.id = 'div6'
+            let sub = document.createElement('button')
+            sub.id = "sub"
+            sub.innerHTML = "CALCULATE"
+            sub.style.borderColor="black"
+            sub.style.fontStyle="italic"
+            sub.style.boxSizing="25%"
+ 
+
+            
+            document.body.appendChild(sub)     
+            sub.addEventListener("click",checkResult10)
+    }
+
+            function checkResult10(){
+                var amount10=document.getElementById("inp1").value
+        var increase_b=document.getElementById("inp2").value
+         var result10=((parseInt(increase_b)/100)*parseInt(amount10))+parseInt(amount10)
+            
+
+         let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+
+            
+        let para = document.createElement('p')
+        para.innerHTML = "Result : "+result10;
+            para.style.fontSize="30px"
+            para.style.fontWeight="1200"
+            para.style.fontStyle="italic"
+            para.style.color="red"
+            document.body.appendChild(para)
+            }
+
+
+            function Discount(){
+        let ques = document.createElement('p')
+            ques.innerHTML = " Amount"
+            ques.style.fontSize="25px"
+            
+            document.body.appendChild(ques)
+            let div1 = document.createElement("div")
+            div1.id = 'div1'
+            let userinput1 = document.createElement('input')
+            userinput1.type = "number"
+            userinput1.id = "inp1"
+            userinput1.style.backgroundColor="#ECF0F1"
+            userinput1.style.borderColor="black"
+            document.body.appendChild(div1.appendChild(userinput1))
+
+            let ques1 = document.createElement('p')
+            ques1.innerHTML = "Discount"
+            ques1.style.fontSize="25px"
+            
+            document.body.appendChild(ques1)
+            let div2 = document.createElement("div")
+            div2.id = 'div2'
+            let userinput2 = document.createElement('input')
+            userinput2.type = "number"
+            userinput2.id = "inp2"
+            userinput2.style.backgroundColor="#ECF0F1"
+            userinput2.style.borderColor="black"
+            document.body.appendChild(div2.appendChild(userinput2))
+
+
+            
+            let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+
+            // let div6 = document.createElement("div")
+            // div6.id = 'div6'
+            let sub = document.createElement('button')
+            sub.id = "sub"
+            sub.innerHTML = "CALCULATE"
+            sub.style.borderColor="black"
+            sub.style.fontStyle="italic"
+            sub.style.boxSizing="25%"
+ 
+
+            
+            document.body.appendChild(sub)     
+            sub.addEventListener("click",checkResult1)
+    }
+
+            function checkResult1(){
+                var amount1=document.getElementById("inp1").value
+        var increase_by=document.getElementById("inp2").value
+         var result1= parseInt(amount1)-((parseInt(increase_by)/parseInt(amount1))*100)
+
+         let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+            
+            
+        let para = document.createElement('p')
+        para.innerHTML = "Result : "+result1;
+            para.style.fontSize="30px"
+            para.style.fontWeight="1200"
+            para.style.fontStyle="italic"
+            para.style.color="red"
+            document.body.appendChild(para)
+            }
+
+            function pc(){
+        let ques = document.createElement('p')
+            ques.innerHTML = "What is"
+            ques.style.fontSize="25px"
+            
+            document.body.appendChild(ques)
+            let div1 = document.createElement("div")
+            div1.id = 'div1'
+            let userinput1 = document.createElement('input')
+            userinput1.type = "number"
+            userinput1.id = "inp1"
+            userinput1.style.backgroundColor="#ECF0F1"
+            userinput1.style.borderColor="black"
+            document.body.appendChild(div1.appendChild(userinput1))
+
+            let ques1 = document.createElement('p')
+            ques1.innerHTML = "Of"
+            ques1.style.fontSize="25px"
+            
+            document.body.appendChild(ques1)
+            let div2 = document.createElement("div")
+            div2.id = 'div2'
+            let userinput2 = document.createElement('input')
+            userinput2.type = "number"
+            userinput2.id = "inp2"
+            userinput2.style.backgroundColor="#ECF0F1"
+            userinput2.style.borderColor="black"
+            document.body.appendChild(div2.appendChild(userinput2))
+
+
+            
+            let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+
+            // let div6 = document.createElement("div")
+            // div6.id = 'div6'
+            let sub = document.createElement('button')
+            sub.id = "sub"
+            sub.innerHTML = "CALCULATE"
+            sub.style.borderColor="black"
+            sub.style.fontStyle="italic"
+            sub.style.boxSizing="25%"
+ 
+
+            
+            document.body.appendChild(sub)     
+            sub.addEventListener("click",checkResult2)
+    }
+
+            function checkResult2(){
+                var what_is=document.getElementById("inp1").value
+        var of_=document.getElementById("inp2").value
+         var result2= ((parseInt(what_is)/100)*parseInt(of_))
+
+         let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+            
+            
+        let para = document.createElement('p')
+        para.innerHTML = "Result : "+result2;
+            para.style.fontSize="30px"
+            para.style.fontWeight="1200"
+            para.style.fontStyle="italic"
+            para.style.color="red"
+            document.body.appendChild(para)
+            }
+    
+            function change(){
+        let ques = document.createElement('p')
+            ques.innerHTML = "From Value"
+            ques.style.fontSize="25px"
+            
+            document.body.appendChild(ques)
+            let div1 = document.createElement("div")
+            div1.id = 'div1'
+            let userinput1 = document.createElement('input')
+            userinput1.type = "number"
+            userinput1.id = "inp1"
+            userinput1.style.backgroundColor="#ECF0F1"
+            userinput1.style.borderColor="black"
+            document.body.appendChild(div1.appendChild(userinput1))
+
+            let ques1 = document.createElement('p')
+            ques1.innerHTML = "To Value"
+            ques1.style.fontSize="25px"
+            
+            document.body.appendChild(ques1)
+            let div2 = document.createElement("div")
+            div2.id = 'div2'
+            let userinput2 = document.createElement('input')
+            userinput2.type = "number"
+            userinput2.id = "inp2"
+            userinput2.style.backgroundColor="#ECF0F1"
+            userinput2.style.borderColor="black"
+            document.body.appendChild(div2.appendChild(userinput2))
+
+
+            
+            let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+
+            // let div6 = document.createElement("div")
+            // div6.id = 'div6'
+            let sub = document.createElement('button')
+            sub.id = "sub"
+            sub.innerHTML = "CALCULATE"
+            sub.style.borderColor="black"
+            sub.style.fontStyle="italic"
+            sub.style.boxSizing="25%"
+ 
+
+            
+            document.body.appendChild(sub)     
+            sub.addEventListener("click",checkResult20)
+    }
+
+            function checkResult20(){
+                var from_value=document.getElementById("inp1").value
+        var to_value=document.getElementById("inp2").value
+         var result30= ((parseInt(to_value)-parseInt(from_value))/parseInt(from_value))*100
+
+         let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+            
+            
+        let para = document.createElement('p')
+        para.innerHTML = "Result (% change) : "+result30;
+            para.style.fontSize="30px"
+            para.style.fontWeight="1200"
+            para.style.fontStyle="italic"
+            para.style.color="red"
+            document.body.appendChild(para)
+            }
+    
+    
+
+    
+            function per(){
+        let ques = document.createElement('p')
+            ques.innerHTML = "Value"
+            ques.style.fontSize="25px"
+            
+            document.body.appendChild(ques)
+            let div1 = document.createElement("div")
+            div1.id = 'div1'
+            let userinput1 = document.createElement('input')
+            userinput1.type = "number"
+            userinput1.id = "inp1"
+            userinput1.style.backgroundColor="#ECF0F1"
+            userinput1.style.borderColor="black"
+            document.body.appendChild(div1.appendChild(userinput1))
+
+            let ques1 = document.createElement('p')
+            ques1.innerHTML = "Is What Percent Of"
+            ques1.style.fontSize="25px"
+            
+            document.body.appendChild(ques1)
+            let div2 = document.createElement("div")
+            div2.id = 'div2'
+            let userinput2 = document.createElement('input')
+            userinput2.type = "number"
+            userinput2.id = "inp2"
+            userinput2.style.backgroundColor="#ECF0F1"
+            userinput2.style.borderColor="black"
+            document.body.appendChild(div2.appendChild(userinput2))
+
+
+            
+            let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+
+            // let div6 = document.createElement("div")
+            // div6.id = 'div6'
+            let sub = document.createElement('button')
+            sub.id = "sub"
+            sub.innerHTML = "CALCULATE"
+            sub.style.borderColor="black"
+            sub.style.fontStyle="italic"
+            sub.style.boxSizing="25%"
+ 
+
+            
+            document.body.appendChild(sub)     
+            sub.addEventListener("click",checkResult2)
+    }
+
+            function checkResult2(){
+                var value=document.getElementById("inp1").value
+        var what=document.getElementById("inp2").value
+         var result3= (parseInt(value)/parseInt(what))*100
+
+         let blanck=document.createElement("p")
+            blanck.innerHTML=""
+            document.body.appendChild(blanck) ;    
+            
+            
+        let para = document.createElement('p')
+        para.innerHTML = "Result ( % ) : "+result3;
+            para.style.fontSize="30px"
+            para.style.fontWeight="1200"
+            para.style.fontStyle="italic"
+            para.style.color="red"
+            document.body.appendChild(para)
+            }
+    
+</script>
+</html>
